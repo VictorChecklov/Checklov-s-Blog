@@ -1,0 +1,90 @@
+#root {
+  max-width: 100vw;
+  margin: 0 auto;
+  background: black;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.logo-container {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 6px;
+  width: 90%;
+}
+.logo {
+  height: 2.4em;
+  padding: 0.4em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.image-text-container {
+  position: relative;
+  align-self: center;
+  width: 90%;
+  display: flex;
+  gap: 20px;
+  border-radius: 1%;
+  background: rgba(13, 17, 23, 0.95);
+  margin: 0 auto;
+}
+.image-wrapper {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  width: 30%;
+  height: 100%;
+}
+.image-caption{
+  text-align: center;
+  color: white;
+  font-size: 35px;
+}
+.side-image {
+  margin-top: 20px;
+  width: 90%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.side-image:hover {
+  filter: drop-shadow(0 0 2em white);
+}
+.side-title{
+  color: #e2e8f0;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.5;
+  font-family: 'Hasklig', "JetBrains Mono", monospace;
+}
+.side-text {
+  color: #e2e8f0;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 1.5;
+  width: 90%;
+  font-family: 'Hasklig', "JetBrains Mono", monospace;
+}
+
+.divider {
+  width: 90%;
+  height: 1px;
+  background: #4a5568;
+  margin: 20px 0;
+}

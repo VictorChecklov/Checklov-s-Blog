@@ -1,0 +1,220 @@
+.messages {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+.selection-bar-message {
+    position: fixed;
+    background-color: rgba(40, 44, 56, 0.9);
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    z-index: 20;
+    will-change: transform;
+    top: 0;
+    pointer-events: auto;
+}
+
+.selection-bar-message button {
+    margin: 0;
+    padding: 13px 32px;
+    background-color: rgba(40, 44, 56, 0.4);
+    color: #e2e8f0;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    will-change: transform, opacity;
+}
+
+.selection-bar-message button:hover {
+    background: #282c38;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.message-index-container {
+    position: absolute;
+    width: 90%;
+    display: flex;
+    background: rgba(13, 17, 23, 0.95);
+    pointer-events: auto;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.message-index {
+    position: relative;
+    width: 75%;
+    min-height: 80vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.message-index-title {
+    color: #e2e8f0;
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.message-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.message-search-input {
+    padding: 12px;
+    background: rgba(40, 44, 56, 0.4);
+    color: #e2e8f0;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.message-search-input:focus {
+    outline: none;
+    background: rgba(40, 44, 56, 0.6);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.message-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.message-input {
+    padding: 12px;
+    background: rgba(40, 44, 56, 0.4);
+    color: #e2e8f0;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.message-input:focus {
+    outline: none;
+    background: rgba(40, 44, 56, 0.6);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.message-submit-button {
+    padding: 12px;
+    background-color: rgba(40, 44, 56, 0.4);
+    color: #e2e8f0;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.message-submit-button:hover {
+    background: #282c38;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.message-index-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.message-index-item {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background 0.3s ease;
+}
+
+.message-index-item:hover {
+    background: rgba(40, 44, 56, 0.5);
+}
+
+.message-nickname {
+    color: #60a5fa;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.message-content {
+    color: #e2e8f0;
+    font-size: 16px;
+    margin-top: 4px;
+}
+
+.message-meta {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.message-index-empty {
+    color: #94a3b8;
+    font-size: 16px;
+    padding: 12px;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.pagination-button {
+    padding: 8px 12px;
+    background-color: rgba(40, 44, 56, 0.4);
+    color: #e2e8f0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagination-button:hover {
+    background: #282c38;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.pagination-button.active {
+    background: #60a5fa;
+    color: #fff;
+}
+
+.pagination-info {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .message-index {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .message-index-container {
+        width: 95%;
+        padding: 12px;
+    }
+}
